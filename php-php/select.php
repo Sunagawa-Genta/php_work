@@ -83,5 +83,6 @@ foreach ($result as $record) {
       </table>
     </fieldset>
     <a href="graph.php">山口大学医学部付属病院</a>
+    <a href="">山口大学医学部附属病院 口コミ閲覧</a>
 </body>
 </html>

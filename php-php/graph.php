@@ -76,17 +76,21 @@ $result8 = $stmt8->fetchAll(PDO::FETCH_ASSOC);
     <title>Chart Sample</title>
 </head>
 <body>
-    <h1>病院評価</h1>
+    <h1>山口大学医学部附属病院</h1>
     <div style="width: 500px;">
         <canvas id="chart"></canvas>
     </div>
-    <!-- <h2>平均年収</h2>
+    <div>
+    <h2>平均年収</h2>
+    </div>
     <div style="width: 500px;">
-        <canvas id="chart2"></canvas>
-    </div> -->
+    <canvas id="chart2"></canvas>
+    </div>
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/Chart.min.js"></script>
     <script>
         //待遇面の満足度
         const output = <?= json_encode($result)?>;
@@ -112,7 +116,7 @@ $result8 = $stmt8->fetchAll(PDO::FETCH_ASSOC);
         //平均年収
         const output8 = <?= json_encode($result8)?>;
         var enjoy8 = Object.values(output8[0]);
-        
+        console.log(enjoy8);
 
         var ctx = $('#chart');
         var mychart = new Chart(ctx, {
@@ -155,6 +159,34 @@ $result8 = $stmt8->fetchAll(PDO::FETCH_ASSOC);
         },
     },
     });
+</script>
+<script>
+var ctx = document.getElementById('chart2');
+
+var data = {
+    labels: ["看護師平均", "山口大学平均"],
+    datasets: [{
+        label: '年収',
+        data: [400, enjoy8[0]],
+        backgroundColor: 'rgba(255, 100, 100, 1)'
+    }]
+};
+
+var options = {
+    indexAxis: 'y',
+    scales: {
+        x:{
+            min: 0
+            //beginAtZero: true
+        }
+    }
+};
+
+var chart2 = new Chart(ctx, {
+    type: 'bar',
+    data: data,
+    options: options
+});
 </script>
 
 </body>
