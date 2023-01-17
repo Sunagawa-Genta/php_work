@@ -77,13 +77,13 @@ $result8 = $stmt8->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     <h1>山口大学医学部附属病院</h1>
-    <div style="width: 500px;">
+    <div style="width: 500px; margin:auto">
         <canvas id="chart"></canvas>
     </div>
     <div>
-    <h2>平均年収</h2>
+    <h1>平均年収</h1>
     </div>
-    <div style="width: 500px;">
+    <div style="width: 500px; margin:auto">
     <canvas id="chart2"></canvas>
     </div>
     
@@ -125,7 +125,7 @@ $result8 = $stmt8->fetchAll(PDO::FETCH_ASSOC);
                 labels: [
                     '待遇面の満足度','社内の士気','風通しの良さ','社員の相互尊重','20代成長環境','人材の長期育成','人事評価の適正感'],
                 datasets: [{
-                 label: 'yamaguchi',
+                 label: '山口大学医学部附属病院',
                  data: [enjoy[0], enjoy2[0], enjoy3[0], enjoy4[0], enjoy5[0], enjoy6[0], enjoy7[0]],
                 // データライン
                  borderColor: 'blue',
