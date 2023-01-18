@@ -30,10 +30,7 @@
           <a class="nav-link text-white" href="use.php">使い方</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="fun/index.php">掲示板</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="">情報入力</a>
+          <a class="nav-link text-white" href="app/index.php">掲示板</a>
         </li>
       </ul>
       <form class="d-flex">

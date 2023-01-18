@@ -1,8 +1,6 @@
 <?php
 include_once("./app/database/connect.php");
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

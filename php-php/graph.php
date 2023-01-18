@@ -1,8 +1,8 @@
 <?php
 // DB接続
-$dbn ='mysql:dbname=gs_work;charset=utf8mb4;port=3306;host=localhost';
-$user = 'genta';
-$pwd = 'root';
+$dbn ='mysql:host=mysql57.uy01.sakura.ne.jp;dbname=uy01_gs_work;charset=utf8';
+$user = 'uy01';
+$pwd = 'genta0810';
 
 try {
   $pdo = new PDO($dbn, $user, $pwd);

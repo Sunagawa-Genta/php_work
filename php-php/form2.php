@@ -1,11 +1,11 @@
 <?php
 try {
   //DB名、ユーザー名、パスワードを変数に格納
-  $dbn = 'mysql:host=mysql57.uy01.sakura.ne.jp;dbname=uy01_gs_work;charset=utf8';
-  $user = 'uy01';
-  $password = 'genta0810';
+  $dsn ='mysql:host=mysql57.uy01.sakura.ne.jp;dbname=uy01_gs_work;charset=utf8';
+  $user ='uy01';
+  $password ='genta0810';
  
-  $PDO = new PDO($dbn, $user, $password); //PDOでMySQLのデータベースに接続
+  $PDO = new PDO($dsn, $user, $password); //PDOでMySQLのデータベースに接続
   $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
  
   //input.phpの値を取得
@@ -27,3 +27,15 @@ try {
   exit('データベースに接続できませんでした。' . $e->getMessage());
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <a href="form1.php">戻る</a>
+</body>
+</html>

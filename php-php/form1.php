@@ -27,6 +27,7 @@
   <div>
   <input type="submit" class="btn btn-outline-primary" value="送信">
   </div>
+  <a href="home.php">ホームへ</a>
 </form>
 </body>
 </html>
